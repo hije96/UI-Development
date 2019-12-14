@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, address,
+em, img,
+strong,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+footer, header,
+menu, nav,section{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*--------------------------------------------------------------------------*/
+html, body{
+  font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+}
+header{
+  width:100%;
+  height:66px;
+  position:fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  background-color: rgba(64,64,64,0.75);
+  line-height: 66px;
+  z-index: 10;
+}
+.logo_link{
+  position:absolute;
+  right:70%;
+  top:50%;
+  display: block;
+  width:106px;
+  height:22px;
+  margin-top: -11px;
+}
+.logo{
+  display: block;
+  width:100%;
+  height: 100%;
+  background: url("../image/logo.png") no-repeat 0 0;
+}
+.invite_wrap{
+  width:100%;
+  background-color: #fff;
+}
+.section_invite{
+  max-width: 1920px;
+  width:100%;
+  height: 750px;
+  margin:0 auto;
+  background: url("../image/section_invite.jpg") no-repeat 50% 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.section_invite .blind{
+  top:66px;
+}
+.creator_wrap{
+  width:100%;
+  background-color: #f9939d;
+}
+.section_creator{
+  max-width: 1920px;
+  width:100%;
+  height: 822px;
+  margin:0 auto;
+  background: url("../image/section_creator.jpg") no-repeat 50% 0;
+  position: relative;
+}
+.store_wrap{
+  width:100%;
+  background-color: #d5e43f;
+}
+.section_store{
+  max-width: 1920px;
+  width:100%;
+  height: 1084px;
+  margin:0 auto;
+  background: url("../image/section_store.jpg") no-repeat 50% 0;
+  position: relative;
+}
+.store_list{
+  width:980px;
+  height: 740px;
+  margin: 0 auto;
+  padding-top: 300px;
+  display: block;
+}
+.store_item{
+  height: 370px;
+  width: 230px;
+  float: left;
+  margin-left: 20px;
+  text-align: center;
+}
+.store_list li:nth-child(4n+1){
+  margin-left: 0;
+}
+.picture_wrap{
+  width:230px;
+  height: 230px;
+  position: relative;
+  display: block;
+}
+.picture_link{
+  display: block;
+  width:100%;height: 100%;
+}
+.picture_info_wrap{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+
+	top: 0;left: 0;
+	border-radius: 10px;
+  background-color: rgba(69,132,2,0.9);
+	display: block;
+	text-align: center;
+}
+.picture_wrap:hover .picture_info_wrap,
+.picture_wrap:focus .picture_info_wrap{
+  width: 100%;
+  height: 100%;
+  margin:0;
+  overflow: inherit;
+  clip:inherit;
+}
+.picture_info_wrap:after {
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	height: 100%;
+	content: '';
+}
+.picture_wrap:hover .picture_info,
+.picture_wrap:focus .picture_info{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+/*display table속성을 이용해 수직정렬 시도 -> width를 230px로
+설정하였음에도 개발자 도구에서 229.6px로 측정됩니다ㅠㅠ 이유가 무엇인가요??
+/* .picture_info_wrap{
+  border-radius: 10px;
+  width: 230px;
+  height:230px;
+  background-color: rgba(69,132,2,0.9);
+  position: absolute;
+  display: table;
+  top:0;
+  color:#fff;
+  text-align: center;
+}
+.picture_info{
+  display: table-cell;
+  vertical-align: middle;
+} */
+.picture_info em{
+  font-size: 65px;
+  color:#fff;
+}
+.picture_info p{
+  font-size: 20px;
+  color:#fff;
+}
+.picture{
+  border-radius: 10px;
+  width:230px;height: 230px;
+}
+.item_info{
+  width: 100%;
+  height:140px;
+  line-height:30px;
+  padding: 20px 10px;
+	box-sizing: border-box;
+}
+.item_info p{
+  font-size: 20px;
+  color:#1b1d21;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item_info em{
+  font-size: 28px;
+  font-weight: bold;
+}
+.recipe_wrap{
+  width:100%;
+  background-color: #b893f9;
+  height: 1030px;
+}
+.section_recipe{
+  max-width: 1920px;
+  width:100%;height:100%;
+  margin:0 auto;
+  background: url("../image/section_recipe.png") no-repeat 50% 100px;
+  position: relative;
+}
+.recipe_wrap:before{
+  position: absolute;
+  display: block;
+  content:'';
+  /*height 100%을 주었을 때, height가 722px가 되는데 이유가 무엇인가요?*/
+  width:100%;height: 1030px;
+
+  background: url("../image/pattern_recipe.png") repeat-x 0 50%;
+}
+.recipe_item{
+  display: block;
+  width:480px;
+  height: 482px;
+  position: absolute;
+}
+.recipe_strawberry{
+  top:299px;left:50%;
+  margin-left: -490px
+}
+.recipe_banana{
+  top:299px;left:50%;
+  margin-left: 10px
+}
+.btn_recipe{
+  position: absolute;
+  width: 310px;
+  height: 91px;
+  display: block;
+  background: url("../image/go_recipe.gif");
+  bottom:100px;
+  left:50%;
+  margin-left: -155px;
+}
+.btn_recipe:hover,
+.btn_recipe:focus{
+  background: url("../image/go_recipe_over.gif");
+}
+.faq_wrap{
+  width:100%;
+  background-color: #fff;
+}
+.section_faq{
+  max-width: 1920px;
+  width:100%;
+  margin:0 auto;
+  position: relative;
+}
+.faq_title{
+	position: relative;
+	background: url("../image/title_faq.gif") no-repeat 0 0;
+	width:98px;
+	height: 50px;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+.faq_list{
+	max-width:1000px;
+	min-width: 500px;
+	margin:20px auto 0;
+	border-bottom: 1px solid #a1a5ad;
+	margin-bottom: 100px;
+}
+.faq_list dt{
+	border-top: 1px solid #a1a5ad;
+	font-size: 20px;
+	color:#1b1d21;
+	line-height: 28px;
+	font-weight: bold;
+	padding:20px 60px 20px 0px;
+	position: relative;
+}
+.faq_question{
+	display: block;
+	position: relative;
+	padding-left: 60px;
+}
+.icon_question{
+	position: absolute;
+	background: url("../image/icon_question.gif") no-repeat 50% 5px;
+	top:0;bottom: 0;left: 0;
+	width:60px;
+}
+.faq_list dd{
+	font-size: 16px;
+	color:#60656e;
+	line-height: 28px;
+	padding:20px 60px 20px 0;
+	background-color:#f7f8fa;
+	display: none;
+}
+.faq_list dd.on{
+	display: block;
+}
+.faq_list .on button{
+	background: url("../image/icon_arrow_up.gif") no-repeat 50% 50%;
+}
+.faq_list .on button span{
+	visibility: hidden;
+}
+.faq_list .on button span:after{
+	content:'닫힘';
+	display: block;
+	visibility:visible;
+}
+.faq_list button span{
+	visibility: visible;
+}
+.faq_list button span:after{
+	content:'';
+	display: none;
+}
+
+.faq_answer{
+	display: block;
+	position: relative;
+	padding-left: 60px;
+}
+.icon_answer{
+	position: absolute;
+	background: url("../image/icon_answer.gif") no-repeat 50% 5px;
+	top:0;bottom: 0;left: 0;
+	width:60px;
+}
+.faq_list button{
+	position: absolute;
+	background: url("../image/icon_arrow_down.gif") no-repeat 50% 50%;
+	border:none;
+	top:0;bottom: 0;right: 0;
+	width:60px;
+	padding: 0;
+}
+footer{
+  width:100%;
+  height:80px;
+  background-color: #e0e4eb;
+  font-size: 18px;
+  color:#70757d;
+  text-align: center;
+  line-height: 80px;
+}
+.btn_top{
+	position: fixed;
+	bottom: 180px;
+	right: 0;
+	width:100px;
+	height:100px;
+	background: url("../image/go_top.gif") no-repeat 0 0;
+	z-index: 10;
+	display: block;
+}

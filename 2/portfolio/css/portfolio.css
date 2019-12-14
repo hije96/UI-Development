@@ -1,0 +1,502 @@
+@charset "UTF-8";
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, address, ul, ol, li, fieldset,
+footer, header, nav, section,dl, dt, dd, em{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+footer, header, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*--------------------------------------------------------------------------*/
+html, body{
+	font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
+	color:#fff;
+}
+header{
+  background-color: #000;
+	width: 100%;
+	min-width: 1080px;
+}
+header h1{
+	padding : 0 40px;
+  width:1080px;
+  height:120px;
+  margin:0 auto;
+	font-size: 40px;
+  color:#fff;
+  font-weight: bold;
+	line-height: 120px;
+	box-sizing: border-box;
+}
+section{
+	width: 100%;
+	min-width: 1080px;
+}
+.content_wrap{
+	width:1080px;
+  padding:40px;
+  margin:0 auto;
+  box-sizing: border-box;
+}
+nav, .content{
+  width:1000px;
+}
+.menu:after{
+  display: block;
+  content:'';
+  clear:both;
+}
+.menu_item{
+  float:left;
+  text-align: center;
+}
+.menu_link{
+  text-decoration: none;
+  display:block;
+  border: 1px solid #d1d1d1;
+  height:33px;
+  width:324px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color:#000;
+  line-height: 33px;
+}
+.menu_item:hover .menu_link{
+  border: 1px solid #454545;
+  font-weight: bold;
+}
+.menu_item + .menu_item{
+  margin-left:14px;
+}
+.content h2{
+  padding:40px 0 20px;
+  font-size:20px;
+  color:#000;
+  font-weight: bold;
+  border-bottom: 1px solid #454545;
+}
+.content_item{
+  margin-top:30px;
+  border:1px solid #d1d1d1;
+}
+.content_item h3{
+  font-size: 16px;
+  height:46px;
+  line-height: 46px;
+  color:#333;
+  font-weight: bold;
+
+	background-color:#f7f7f7;
+  padding-left:15px;
+  box-sizing: border-box;
+}
+.content_content{
+  border-top:1px solid #d1d1d1;
+  padding:30px;
+  font-size:12px;
+  color:#000;
+}
+footer{
+  height:120px;
+  width:100%;
+	min-width: 1080px;
+  border-top:1px solid #d1d1d1;
+	text-align: center;
+}
+footer::before{
+	content: '';
+	display: inline-block;
+	width:0;
+	height: 100%;
+	vertical-align: middle;
+}
+.footer_wrap{
+  text-align: center;
+  font-size:12px;
+	line-height: 30px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.footer_wrap .contact{
+  color:#999;
+  display: block;
+}
+.copyright{
+  color:#000;
+  display: block;
+}
+a{
+	color:#000;
+}
+a:visited{
+	color:#000;
+}
+.table_item {
+	width:100%;/* 100%을 주었는데 0.4px가 손실되었습니다. 그 이유가 무었인가요?*/
+	text-align: center;
+	font-size: 12px;
+	color:#555;
+	table-layout: fixed;
+	box-sizing: border-box;
+	border-collapse: collapse;
+}
+.table_item caption{
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 15px;
+}
+.table_item thead{
+	background-color: #fbfbfb;
+	box-sizing: border-box;
+}
+.table_item th,.table_item td{
+	height:40px;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+.table_kid{
+	margin-bottom: 30px
+}
+.table_kid th,
+.table_kid td {
+	border:1px solid #e4e4e4;
+}
+.table_kid th{
+	font-weight: bold;
+}
+.table_refund thead{
+	border-top: 2px solid #a5a5a5;
+	border-bottom: 1px solid #e4e4e4;
+}
+.table_refund tfoot{
+	border-top: 1px solid #a5a5a5;
+	border-bottom: 1px solid #e4e4e4;
+	font-weight: bold;
+}
+.table_refund td{
+	text-align: right;
+	padding-right:80px;
+}
+.table_refund th + th{
+	text-align: right;
+	padding-right:80px;
+}
+.form_join fieldset{
+	border:none;
+}
+.form_join legend{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px
+}
+.form_wrap{
+		background-color: #fbfbfb;
+		border:1px solid #e4e4e4;
+		padding:20px;
+}
+.form_item label, .form_item h4{
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.form_item input[type=text],.form_item input[type=password],.form_item input[type=text],
+.form_item input[type=email], .form_item input[type=number], textarea{
+	width:100%;
+	box-sizing: border-box;
+}
+.form_item{
+	margin-bottom: 20px;
+}
+.form_item .date_wrap{
+	display: table;
+	width:100%;
+	table-layout: fixed;
+}
+.date_wrap .form_date{
+	display: table-cell;
+}
+.form_date select{
+	width: 100%;
+}
+.form_item.date_item{
+	margin:0px -15px 20px -15px;
+}
+.form_date, .date_item h4{
+	padding:0 15px;
+}
+.form_item select{
+	font-size: 12px;
+}
+.blind{
+	position: absolute;
+  width: 1px;
+  height: 1px;
+	clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+}
+.form_item input, .form_item select{
+	height: 30px;
+	padding:0 5px;
+}
+.form_item input[type=radio],
+.form_item input[type=checkbox]{
+	cursor:pointer;
+	height: auto;
+}
+.form_item input[type=radio]+label,
+.form_item input[type=checkbox]+label{
+	font-size: 12px;
+	display: inline-block;
+	font-weight: normal;
+	line-height: 30px;
+	margin:0;
+	cursor: pointer;
+}
+.gender_item{
+	display: inline-block;
+	width:100px;
+}
+.phone_item{
+	margin-bottom: 5px;
+}
+.phone_item input[type=number]{
+	width:700px;
+	float: left;
+}
+.phone_item button{
+	width:190px;
+	float: right;
+	border: 1px solid #08a600;
+	background-color: #4ec53d;
+	font-size: 12px;
+	color:#fff;
+	height: 30px;
+	cursor:pointer
+}
+.phone_item::after{
+	display: block;
+	content: '';
+	clear:both;
+}
+.hobby_wrap{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.hobby_item{
+	display: table-cell;
+}
+.form_item textarea{
+	resize: none;
+}
+.btn_join{
+	border: 1px solid #08a600;
+	background-color: #4ec53d;
+	font-size: 16px;
+	color:#fff;
+	width: 100%;
+	height: 50px;
+	cursor: pointer;
+}
+.list_item + .list_item{
+	margin-top: 50px;
+}
+.list_item h4{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.project_item{
+	border:1px solid #e4e4e4;
+	padding:50px 10px;
+}
+.project_item h5{
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+}
+.project_item dt{
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+}
+.project_item dt span{
+	font-size: 12px;
+	font-weight: nomal;
+	color:#559bfa;
+}
+.project_item dd{
+	font-size: 12px;
+	line-height: 20px
+}
+.search_item{
+	border:1px solid #e4e4e4;
+	padding:15px;
+	width:250px;
+}
+.search_item em{
+	display: inline-block;
+	width:17px;
+	height:17px;
+	border:1px solid #e0e0e0;
+	font-size: 10px;
+	color:#666;
+	text-align: center;
+	line-height: 17px;
+}
+.search_item a{
+	font-size: 12px;
+	text-decoration: none;
+	margin-left: 5px;
+}
+.search_item a:hover{
+	text-decoration:underline;
+}
+.search_item li{
+	padding:5px 0;
+}
+.cookie_item{
+	border: 1px solid #e4e4e4;
+	padding:15px;
+}
+.cookie_item li{
+	list-style: inside;
+	padding:10px 0;
+}
+.cookie_item em{
+	font-size: 12px;
+	font-weight: bold;
+}
+.cookie_item span{
+	color:#559bfa;
+}
+.cookie_item strong{
+	font-size: 12px;
+	color:#ec5336;
+}
+.cookie_item a{
+	color:#559bfa;
+}
+.cookie_item li + a{
+	display: block;
+	margin-left:15px;
+	padding-bottom: 10px;
+}
+.news_item{
+	border:1px solid #e4e4e4;
+	padding: 0 18px;
+}
+.news_item img{
+	width:80px;
+	height:80px;
+}
+.news_item li{
+	padding:18px 0;
+	display: table;
+	table-layout: fixed;
+}
+.news_item a.news_photo{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.news_item .news_photo,
+.news_item .news_photo+dl{
+	display: table-cell;
+}
+.news_photo+dl{
+	padding-left:5px;
+}
+.news_item dl{
+	vertical-align: middle;
+}
+.news_item dt{
+	font-size: 14px;
+	color:#00c;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.news_item a, .news_item a:visited{
+	color:#00c;
+}
+.news_item dd{
+	font-size: 12px;
+	line-height: 18px;
+}
+.news_item li + li{
+	border-top: 1px solid #e4e4e4;
+}
+.webtoon_item{
+	border:1px solid #e4e4e4;
+	padding:20px;
+}
+.webtoon_item li{
+	float:left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	width:285px;
+}
+.webtoon_item li:nth-child(3n+1) {
+    margin-left: 0;
+}
+.webtoon_item:after{
+	content:'';
+	display: block;
+	clear:both;
+}
+.webtoon_item h5{
+	font-size: 14px;
+	font-weight: bold;
+	display: inline-block;
+	line-height: 20px;
+}
+.webtoon_item h5:hover{
+	text-decoration: underline;
+}
+.webtoon_item p{
+	font-size: 12px;
+	line-height: 16px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.webtoon_item .cuttoon{
+	border:1px solid #71b036;
+	background-color: #80c83d;
+	font-size: 10px;
+	color:#fff;
+	margin-right: 3px;
+}
+.webtoon_item .smarttoon{
+	border:1px solid #df4e28;
+	background-color: #ec5336;
+	font-size: 10px;
+	color:#fff;
+	margin-right: 3px;
+}
+.webtoon_item a{
+	display: block;
+	width:100%;
+	height: 100%;
+	text-decoration: none;
+}
